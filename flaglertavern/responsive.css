@@ -1,0 +1,103 @@
+/* ------------------------------ 
+	1199px
+------------------------------ */
+@media screen and (max-width: 1199px) {
+	/* Main Nav */
+	.header-logo {
+		height: 50px;
+	}
+
+}
+
+
+
+
+/* ------------------------------ 
+	991px
+------------------------------ */
+@media screen and (max-width: 991px) {
+
+	.menu-section .container, .callout-one-section .container, .callout-two-section .container, .gear-section .bg-img {
+	    background: none;
+	}
+	.gear-section .bg-img {
+		height: auto;
+	}
+
+}
+
+
+
+
+/* ------------------------------ 
+	768px
+------------------------------ */
+@media screen and (max-width: 767px) {
+
+	#site-navigation {
+	    width: 50%;
+	}
+	#top-menu li {
+	    float: none;
+	    padding: 20px 0;
+	}
+
+}
+
+
+
+
+/* ------------------------------ 
+	640px
+------------------------------ */
+@media screen and (max-width: 640px) {
+
+}
+
+
+
+
+/* ------------------------------ 
+	480px
+------------------------------ */
+@media screen and (max-width: 480px) {
+
+	.header-left-wrap {
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+	#site-navigation {
+	    width: 100%;
+	}
+	.navbar-toggle {
+	    margin: 20px auto;
+	    float: none;
+	    display: block;
+	}
+	#top-menu li {
+	    text-align: center;
+	}
+
+}
+
+
+
+
+/* ------------------------------ 
+	380px RADIO SLIDER ONLY!!!
+------------------------------ */
+@media screen and (max-width: 380px) {
+
+}
+
+
+
+
+/* ------------------------------ 
+	340px
+------------------------------ */
+@media screen and (max-width: 340px) {
+
+}

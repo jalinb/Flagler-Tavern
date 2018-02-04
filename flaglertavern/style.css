@@ -1,0 +1,1074 @@
+/*
+ Theme Name:   FlaglerTavern
+ Theme URI:    http://shokme.com
+ Description:  Twenty Seventeen Child Theme
+ Author:       Jalin Burton
+ Author URI:   http://shokme.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  pushbutton
+*/
+
+
+/* ------------------------------ 
+	General Styles
+------------------------------ */
+@font-face {
+	font-family: 'Wicked-Grit';
+	src:url('assets/fonts/Wicked-Grit.ttf.woff') format('woff'),
+	url('assets/fonts/Wicked-Grit.ttf.svg#Wicked-Grit') format('svg'),
+	url('assets/fonts/Wicked-Grit.ttf.eot'),
+	url('assets/fonts/Wicked-Grit.ttf.eot?#iefix') format('embedded-opentype'); 
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	font-size: 14px;
+}
+body {
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #616161;
+}
+#content {
+	overflow: hidden;
+}
+.content-wrap {
+	margin-top: 20px;
+}
+.site-content {
+	padding-top: 0;
+}
+.site-content-contain {
+	box-shadow: 0px -5px 20px rgba(0,0,0,0.5);
+}
+.home .site-content-contain {
+	box-shadow: none;
+}
+.flex-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+ul, ol {
+	list-style-position: inside;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Wicked-Grit';
+	font-weight: normal;
+}
+a {
+	color: #0036ff;
+	transition: color .2s ease-in-out;
+}
+a:hover, a:focus {
+	color: #616161;
+	text-decoration: none;
+}
+a[href^="tel:"] {
+	color: #fff;
+}
+/*p a {
+	font-weight: 600;
+}*/
+.white-txt {
+	color: #fff;
+}
+.grey-txt {
+	color: #616161;
+}
+.dark-txt {
+	color: #222;
+}
+.blue-txt {
+	color: #0036ff;
+}
+.brown-txt {
+	color: #9a8a64;
+}
+.orange-txt {
+	color: #ff3c00;
+}
+.tan-txt {
+	color: #e4d5b1;
+}
+.red-txt {
+	color: #b52103;
+}
+.red-hdg {
+	color: #b52103;
+}
+.fancy-font {
+	font-family: 'Wicked-Grit';
+}
+.center-elements {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.learn-more {
+	background: none;
+	color: #0036ff;
+	font-weight: 700;
+	padding: 0;
+	text-transform: uppercase;
+}
+.learn-more:hover {
+	color: #616161;
+}
+.btn {
+	color: #fff;
+	font-weight: 500;
+	border-radius: 30px;
+	padding: 15px 50px;
+	text-transform: uppercase;
+	transition: all .2s ease-in-out;
+}
+.btn:hover, .btn:focus {
+	background: #616161;
+	color: #fff;
+}
+.btn-blue {
+	background: #0036ff;
+	color: #fff;
+}
+.btn-orange {
+	background: #ff3c00;;
+	color: #fff;
+}
+.btn-red {
+	background: #b52103;
+	background: -moz-linear-gradient(top, #b52103 0%, #951b01 100%);
+	background: -webkit-linear-gradient(top, #b52103 0%,#951b01 100%);
+	background: linear-gradient(to bottom, #b52103 0%,#951b01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52103', endColorstr='#951b01',GradientType=0 );
+	color: #fff;
+}
+.btn-tan {
+	background: #e4d5b1;
+	color: #121010;
+}
+.btn-green {
+	background: #0d817e;
+	color: #fff;
+}
+.btn-wrap .btn {
+	float: left;
+	margin-right: 20px;
+}
+.btn-wrap-center {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.gray-gradient-bg {
+	background: #444444;
+	background: -moz-radial-gradient(center, ellipse cover, #444444 0%, #000000 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #444444 0%,#000000 100%);
+	background: radial-gradient(ellipse at center, #444444 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#000000',GradientType=1 );
+}
+.wood-grain-bg {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/wood-grain-bg.png');
+	background-size: cover;
+}
+.green-bg {
+	background: rgba(13,129,126,0.75);
+	color: #fff;
+}
+.page #content.site-content {
+	padding-bottom: 0;
+}
+.faded-edges-gradient {
+	background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+	height: 100%;
+}
+.section-content {
+	padding: 60px 0;
+}
+.section {
+	margin-bottom: 60px;
+}
+.intro-text {
+	margin-bottom: 40px;
+}
+.item-last {
+	margin: 0 !important;
+}
+
+
+
+
+/* Bars Nav Menu */
+.bar-title {
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: #333;
+    transition: color .25s ease-in-out;
+}
+.bars-wrap a:hover .bar-title {
+    color: #283cf4;
+}
+.bars-wrap img {
+	transition: opacity .25s ease-in-out;
+}
+.bars-wrap a:hover img {
+	opacity: .5;
+}
+.bar-img {
+	background: #000;
+}
+
+
+
+
+/* YouTube */
+.youtube-wrap {
+	margin: 0 auto;
+	max-width: 850px;
+}
+.youtube-player {
+	position: relative;
+	padding-bottom: 56.23%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	background: #000;
+	margin: 5px;
+}
+.youtube-player iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: transparent;
+}
+.youtube-player img {
+	bottom: 0;
+	display: block;
+	left: 0;
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	height: auto;
+	cursor: pointer;
+	-webkit-transition: .4s all;
+	-moz-transition: .4s all;
+	transition: .4s all;
+	-webkit-filter: brightness(50%);
+}
+.youtube-player .play {
+	height: 70px;
+	width: 100px;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -35px;
+	position: absolute;
+	background: url("assets/images/icons/icon-play-button.png") no-repeat;
+	cursor: pointer;
+}
+
+
+
+
+/* Social Media Share Buttons */
+.share-link {
+    padding: 2px 8px 4px 8px !important;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    margin-top: 2px;
+    display: inline-block;
+    text-decoration: none;
+}
+.share-link:hover,.share-link:active {
+    color: white;
+}
+.share-twitter {
+    background: #00aced;
+    transition: background .2s ease-in-out;
+}
+.share-twitter:hover,.share-twitter:active {
+    background: #0084b4;
+}
+.share-facebook {
+    background: #3B5997;
+    transition: background .2s ease-in-out;
+}
+.share-facebook:hover,.share-facebook:active {
+    background: #2d4372;
+}
+.share-googleplus {
+    background: #D64937;
+    transition: background .2s ease-in-out;
+}
+.share-googleplus:hover,.share-googleplus:active {
+    background: #b53525;
+}
+.share-linkedin {
+    background: #0074A1;
+    transition: background .2s ease-in-out;
+}
+.share-linkedin:hover,.share-linkedin:active {
+    background: #006288;
+}
+.share-social {
+    margin: 20px 0px 25px 0px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
+.share-social h4 {
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Main Navigation */
+.navigation-top {
+	background: #283cf4;
+	border: none;
+	bottom: unset;
+	position: fixed; /* For Older Browsers */
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 0;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.shrink {
+	background: #000;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	/*height: 60px;*/
+	z-index: 20;
+}
+/* Background on home page has !important because of overwrite with jQuery */
+.home .shrink {
+	background: #000 !important;
+}
+
+/* IE Specific CSS */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+	.sticky-nav {
+		height: 100px;
+		top: 35px;
+	}
+	.sticky-nav.shrink {
+		height: 75px;
+		top: 0;
+	}
+	.carousel {
+		margin-top: 60px;
+	}
+}
+
+.header-logo {
+	margin: 10px 0;
+	height: 80px;
+	width: auto;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+.logo-shrink {
+	height: 40px;
+}
+#top-menu {
+	list-style: none;
+}
+#top-menu li {
+	float: left;
+}
+.main-nav a {
+	font-family: 'Wicked-Grit';
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+}
+.navbar-toggle {
+	background: #9E9E9E;
+}
+.navbar-toggle .icon-bar {
+	background: #fff;
+}
+.navbar-collapse {
+	border: 0;
+	box-shadow: none;
+}
+.js .menu-toggle, .js .dropdown-toggle {
+    display: inherit;
+}
+.dropdown-toggle {
+	right: unset;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: unset;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+	background-color: unset;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: #0026b1;
+    background-color: unset;
+}
+
+
+
+
+/* Top Black Bar */
+.top-bar {
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	padding: 10px 0;
+}
+.top-bar .container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.top-bar .container::before, .top-bar .container::after {
+	display: none;
+}
+.top-bar address {
+	margin-bottom: 0;
+}
+.top-bar i {
+	color: #e4d5b1;
+}
+#high-tide, #low-tide {
+	float: left;
+	font-weight: 600;
+}
+#high-tide {
+	margin-right: 20px;
+}
+#high-tide span, #low-tide span {
+	text-transform: uppercase;
+	color: #e4d5b1;
+}
+
+
+
+/* Social Links */
+.social-wrap ul {
+	list-style: none;
+}
+.social-item {
+	float: left;
+	background: #e4d5b1;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	margin: 0px 3px;
+	transition: background .2s ease-in-out;
+}
+.social-item:hover {
+	background: #9a8a64;
+}
+.header-left-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.social-item .fa {
+	font-size: 22px;
+	color: #0036ff;
+}
+.fa.fa-google-plus {
+	font-size: 20px;
+}
+.fa.fa-spoon {
+	transform: rotate(90deg);
+}
+
+
+
+
+/* Map */
+#map {
+	height: 500px;
+}
+#map-content {
+	margin-top: 10px;
+}
+.map-title {
+	font-family: 'Wicked-Grit';
+	color: #0036ff;
+	font-size: 22px;
+	font-weight: normal;
+}
+#map .img-responsive {
+	margin-right: 15px;
+	max-height: 125px;
+}
+#map address {
+	margin: 5px 0;
+}
+#map a {
+	color: #0036ff;
+	font-weight: 500;
+}
+#map a:hover {
+	color: #616161;
+}
+
+
+
+/* Weather Module */
+.weather-wrap {
+	margin-top: 10px;
+	margin-bottom: -30px;
+}
+.weather-bg {
+	margin: 0 auto;
+	border-radius: 5px;
+	transition: filter 0.4s ease-in-out;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	background: #e2dac7;
+	background: -moz-radial-gradient(center, ellipse cover, #e2dac7 0%, #e4d5b1 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #e2dac7 0%, #e4d5b1 100%);
+	background: radial-gradient(ellipse at center, #e2dac7 0%, #e4d5b1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2dac7", endColorstr="#e4d5b1", GradientType=1);
+}
+.weather-content-wrap {
+	color: #0026b1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.city-title {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.city-weather-description {
+	margin: auto;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: -5px;
+}
+.weather-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.weather-conditions-wrap {
+	text-align: center;
+	padding: 5px;
+}
+.weather-conditions-wrap img {
+	clear: both;
+}
+.city-weather-temperature {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.city-weather-wind {
+	margin-top: -10px;
+	text-align: center;
+}
+
+
+
+
+/* Home Page */
+.home #masthead {
+	background: #283cf4;
+	/*background: -moz-linear-gradient(top, #283cf4 0%, #275af2 100%);
+	background: -webkit-linear-gradient(top, #283cf4 0%,#275af2 100%);
+	background: linear-gradient(to bottom, #283cf4 0%,#275af2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283cf4', endColorstr='#275af2',GradientType=0 );*/
+}
+.home-slider-wrap {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/flagler-tavern-building-bg.jpg');
+	/* Background repeat has !important because of overwrite with jQuery */
+	background-repeat: no-repeat !important;
+	background-size: auto 620px;
+	background-position: bottom center;
+}
+.sign-img {
+	margin-top: 60px;
+}
+#home-slider h1, #home-slider h3 {
+	margin: 0;
+	padding: 0;
+}
+#home-slider h1 {
+	font-size: 60px;
+	color: #e4d5b1;
+}
+#home-slider h3 {
+	font-size: 16px;
+}
+#home-slider .carousel-caption h1, #home-slider .carousel-caption h3 {
+    text-shadow: 1px 1px 10px black;
+}
+.carousel-inner {
+	height: 400px;
+}
+.carousel-inner .item{
+	height: 100%;
+}
+.carousel-control {
+	background: none !important;
+}
+.carousel-indicators {
+	bottom: 0;
+}
+.tagline {
+	font-family: 'Wicked-Grit';
+	font-size: 18px;
+}
+.menu-section {
+	background: #e4d5b1;
+}
+.menu-section .container {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/seafood-plate-background.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto 100%;
+}
+.video-section {
+	background: #aa0d0d;
+	background: -moz-radial-gradient(center, ellipse cover, #aa0d0d 0%, #832120 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #aa0d0d 0%,#832120 100%);
+	background: radial-gradient(ellipse at center, #aa0d0d 0%,#832120 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0d0d', endColorstr='#832120',GradientType=1 );
+}
+.video-section .bg-img {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/tentacles-background.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: auto 95%;
+}
+.events-section {}
+.events-section .bg-img {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/anchor-background.png');
+	background-repeat: no-repeat;
+	background-position: 40px;
+	background-size: auto 100%;
+}
+.events-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.event-single-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	width: 32%;
+	margin: 40px .5%;
+}
+.event-single {
+	background: #0036ff;
+}
+.event-single-content {
+	padding: 20px;
+	width: 100%;
+}
+.event-single h3 {
+	font-size: 30px;
+	margin-top: 0;
+}
+.event-single-content p {
+  font-size: 20px;
+  line-height: 24px;
+}
+.event-single a.learn-more {
+	color: #e4d5b1;
+	font-size: 20px;
+}
+.event-single .learn-more:hover {
+	color: #616161;
+}
+.callout-one-section {
+	background: #ff9d00;
+	background: -moz-linear-gradient(top, #ff9d00 0%, #ffc800 100%);
+	background: -webkit-linear-gradient(top, #ff9d00 0%,#ffc800 100%);
+	background: linear-gradient(to bottom, #ff9d00 0%,#ffc800 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff9d00', endColorstr='#ffc800',GradientType=0 );
+}
+.callout-one-section .container {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/brunch-background.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto 100%;
+}
+.bar-section {
+	background: #283cf4;
+	background: -moz-linear-gradient(top, #283cf4 0%, #275af2 100%);
+	background: -webkit-linear-gradient(top, #283cf4 0%,#275af2 100%);
+	background: linear-gradient(to bottom, #283cf4 0%,#275af2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283cf4', endColorstr='#275af2',GradientType=0 );
+}
+.bar-section .bg-img {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/map-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bars-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.bar-single-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	max-width: calc(25% - 20px);
+	margin: 10px;
+	min-width: 250px;
+}
+.bar-single {
+	background: #e4d5b1;
+}
+.bar-single-content {
+	padding: 20px 10px;
+}
+.bar-single-content h3 {
+	font-size: 30px;
+	margin-top: 0;
+}
+.bar-single-content .tagline {
+	font-size: 16px;
+}
+.bar-single-content .learn-more {
+	font-size: 18px;
+}
+.callout-two-section {}
+.callout-two-section .container {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/envelope-background.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: auto 95%;
+}
+.gear-section {
+	background: #e4d5b1;
+}
+.gear-section .bg-img {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/gear-background.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 100% auto;
+	max-width: 1470px;
+	margin: 0 auto;
+	height: 490px;
+}
+.home section h2 {
+	margin-top: 0;
+	font-size: 70px;
+	line-height: 60px;
+}
+
+
+
+/* The Pilar Bar Page */
+.page-id-76 .navigation-top {
+    background: #0d817e;
+}
+.pilar-bg-container {
+	background: #000;
+}
+.pilar-wrap {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/the-pilar-bar-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: auto 550px;
+	height: 550px;
+	overflow: hidden;
+	position: relative;
+	margin-top: -10px
+}
+.pilar-bio-food {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/pilar-bar-food-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pilar-bio-drinks {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/pilar-bar-drink-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pilar-logo {
+	margin-bottom: 40px;
+}
+.pilar-bio-item {
+    padding: 0px 45px;
+    height: 600px;
+    display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.pilar-bio-item p {
+	color: #fff;
+}
+
+
+
+
+/* The Bounty Page */
+.page-id-43 .navigation-top {
+    background: #ba2226;
+}
+.bounty-bg-container {
+	background: #000;
+}
+.bounty-wrap {
+	background: url('http://flaglertavern.com/wp-content/themes/flaglertavern/assets/images/backgrounds/the-bounty-bg.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: auto 600px;
+	height: 550px;
+	overflow: hidden;
+	position: relative;
+	margin-top: -10px
+}
+.drink-img {
+	position: relative;
+	left: calc(45% - 160px);
+	top: 90px;
+}
+.bounty-logo {
+	margin-bottom: 40px;
+}
+.the-bounty-page .gray-gradient-bg h1 {
+	font-size: 40px;
+}
+.the-bounty-page .gray-gradient-bg h1, .the-bounty-page .gray-gradient-bg h2, .the-bounty-page .gray-gradient-bg h3 {
+	color: #fff;
+}
+.the-bounty-page .gray-gradient-bg .intro-text p {
+	color: #e4d5b1;
+	font-family: 'Wicked-Grit';
+	font-weight: normal;
+	line-height: 24px;
+	font-size: 16px;
+}
+.bounty-intro {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.item-title {
+	color: #fff;
+	font-family: 'Wicked-Grit';
+	font-weight: normal;
+	font-size: 18px;
+}
+.item-description {
+	color: #e4d5b1;
+	font-family: 'Wicked-Grit';
+	font-weight: normal;
+}
+.section-menu .menu-item {
+	margin-bottom: 30px;
+}
+
+
+
+
+/* Events */
+#tribe-events-content .tribe-events-tooltip h4 {
+	color: #283cf4;
+}
+#tribe-events .tribe-events-button {
+	background: #283cf4;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all .2s ease-in-out;
+}
+#tribe-events .tribe-events-button:hover, #tribe-events .tribe-events-button:focus {
+	background: #616161;
+	color: #fff;
+}
+.tribe-events-tooltip .tribe-event-description {
+	margin-top: 10px;
+}
+.tribe-events-calendar thead th {
+    background-color: #231f20;
+    border-left: 1px solid #231f20;
+    border-right: 1px solid #231f20;
+}
+.tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"] > a {
+    background-color: #231f20;
+}
+.tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-events-calendar div[id*="tribe-events-daynum-"] a {
+    background-color: #231f20;
+}
+.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] > a {
+    background-color: #ff3c00;
+}
+.tribe-events-page-title {
+	color: #231f20;
+	font-family: 'Wicked-Grit';
+	font-size: 36px;
+}
+#tribe-bar-form {
+    background: #231f20;
+}
+#tribe-bar-form label {
+    color: #fff;
+}
+#tribe-bar-form input[type="text"] {
+    color: #fff;
+}
+#tribe-bar-form input[type="text"]#tribe-bar-search::placeholder, #tribe-bar-form input[type="text"]::-webkit-input-placeholder, #tribe-bar-form input[type="text"]::-moz-placeholder, #tribe-bar-form input[type="text"]:-ms-input-placeholder, #tribe-bar-form input[type="text"]:-moz-placeholder {
+    color: #fff;
+}
+#tribe-bar-form input::placeholder {
+    color: #fff;
+}
+#tribe-bar-form input::-webkit-input-placeholder {
+	color: #fff;
+}
+#tribe-bar-form input::-moz-placeholder {
+	color: #fff;
+}
+#tribe-bar-form input:-ms-input-placeholder {
+	color: #fff;
+}
+#tribe-bar-form input:-moz-placeholder {
+	color: #fff;
+}
+#tribe-bar-form .tribe-bar-submit input[type="submit"] {
+	background: #ff3c00;
+}
+
+
+
+
+/* Footer */
+.site-footer {
+	border: 0;
+	margin-top: 0;
+}
+.footer-blue {
+	background: #283cf4;
+	background: -moz-linear-gradient(top, #283cf4 0%, #275af2 100%);
+	background: -webkit-linear-gradient(top, #283cf4 0%,#275af2 100%);
+	background: linear-gradient(to bottom, #283cf4 0%,#275af2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283cf4', endColorstr='#275af2',GradientType=0 );
+	color: #fff;
+	padding: 20px 0 40px 0;
+}
+.footer-logo {
+	margin-right: 20px;
+	margin-top: 25px;
+}
+.footer-bottom {
+	background: #000;
+	color: #fff;
+}
+.footer-bottom .container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	padding-top: 10px;
+	font-size: 12px;
+}
+.footer-bottom .container::before, .footer-bottom .container::after {
+	display: none;
+}
+footer h3 {
+	font-family: 'Wicked-Grit';
+	color: #e4d5b1;
+	font-weight: normal;
+}
+footer a, .footer-bottom a {
+	color: #e4d5b1;
+}
+footer a:hover, .footer-bottom a:hover {
+	color: #fff;
+}
+footer .fa {
+	color: #e4d5b1;
+}
+.footer-about {
+	float: left;
+	max-width: calc(100% - 136px);
+}
